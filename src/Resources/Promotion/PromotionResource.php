@@ -2,8 +2,8 @@
 
 namespace JeffersonGoncalves\FilamentCommerce\Promotion\Resources\Promotion;
 
-use Filament\Forms\Form;
 use Filament\Resources\Resource;
+use Filament\Schemas\Schema;
 use Filament\Tables\Table;
 use JeffersonGoncalves\Commerce\Promotion\Models\Promotion;
 use JeffersonGoncalves\FilamentCommerce\Promotion\CommercePromotionPlugin;
@@ -26,9 +26,9 @@ class PromotionResource extends Resource
         }
     }
 
-    public static function form(Form $form): Form
+    public static function form(Schema $schema): Schema
     {
-        return PromotionForm::configure($form);
+        return PromotionForm::configure($schema);
     }
 
     public static function table(Table $table): Table
